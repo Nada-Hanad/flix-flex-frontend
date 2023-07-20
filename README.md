@@ -28,7 +28,7 @@ The frontend of the Movie App FlixFlex is deployed on [Netlify](https://www.netl
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/flix-flex-frontend.git
+git clone https://github.com/Nada-Hanad/flix-flex-frontend.git
 cd flix-flex-frontend
 ```
 
