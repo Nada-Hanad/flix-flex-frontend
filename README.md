@@ -1,47 +1,34 @@
-# Movie App FlixFlex - Frontend
+# FlixFlex (frontend)
 
-This is the frontend repository for the Movie App FlixFlex, a web application that allows users to view a list of movies and series, add them to favorites, view favorite lists, search for movies and series, and view details and trailers of selected movies and series.
+A movie and series browser built with React and Vite: trending titles, paginated movie and series catalogues, search across both, detail pages, and a personal favourites list for signed-in users. Catalogue data comes from [The Movie Database](https://www.themoviedb.org/) API; accounts and favourites come from the companion [FlixFlex backend](https://github.com/Nada-Hanad/flix-flex-backend).
 
-## Overview
+![Login page](docs/screenshots/login.png)
 
-The frontend of the Movie App FlixFlex is built using React and React Router for routing. It communicates with the backend API to fetch data and handle user authentication and favorites management. The frontend uses Axios to make HTTP requests to the backend API.
+*Captured in November 2026 from a production build. The catalogue pages need a TMDB API key, so only the account pages are shown here.*
 
 ## Features
 
-- User registration and authentication
-- View a list of movies and series
-- Pagination for movies and series
-- Add movies or series to favorites
-- Remove movies or series from favorites
-- View favorite movies and series list
-- Search for movies and series
-- View details of movies and series
+- Home page with a hero section and carousels of popular movies and series.
+- Movies and series grids paged with Swiper, and detail pages with a like button.
+- Search across movies and series from the navigation bar.
+- Registration and login with a JWT kept in a cookie; favourites are added and removed through the backend and listed on their own page.
+- Toast notifications for success and errors, and a 404 page.
 
-## Deployment
+## Stack
 
-The frontend of the Movie App FlixFlex is deployed on [Netlify](https://www.netlify.com/). You can access the live application using the following link:
+React 18, Vite, React Router, Material UI, Swiper, Axios, js-cookie and react-toastify.
 
-[Movie App FlixFlex - Live Demo](https://flixflex-test.netlify.app/)
-
-## Installation and Usage
-
-1. Clone the repository:
+## Running it
 
 ```bash
-git clone https://github.com/Nada-Hanad/flix-flex-frontend.git
-cd flix-flex-frontend
-```
-
-2. Install dependencies:
-
-```
 npm install
-```
-
-3. Start the development server:
-
-```
+# create .env with the four variables below
 npm run dev
 ```
 
-4. Open http://127.0.0.1:5173 to view the app in the browser.
+| Variable | Purpose |
+|---|---|
+| `VITE_API_BASE_URL` | TMDB API base URL |
+| `VITE_API_KEY` | TMDB API key |
+| `VITE_POSTER_BASE_URL` | TMDB image base URL |
+| `VITE_AUTH_API_BASE_URL` | URL of the FlixFlex backend |
